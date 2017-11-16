@@ -15,6 +15,7 @@ export default class App extends React.Component {
       <Provider store={store}>
         <View style={styles.container}>
           <Text>Hoge Fuga</Text>
+          <Text>Test</Text>
         </View>
       </Provider>
   );
