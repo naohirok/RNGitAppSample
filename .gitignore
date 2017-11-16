@@ -53,3 +53,14 @@ buck-out/
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
+
+# Babel
+.babelrc
+
+# Expo
+.expo/
+
+# Other
+.flowconfig
+.watchmanconfig
+
