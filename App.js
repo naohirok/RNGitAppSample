@@ -10,6 +10,8 @@ import { Router, Scene } from 'react-native-router-flux';
 import allReducers from './reducers/index';
 
 import Welcom from './components/welcom';
+import RepoList from './components/repoList';
+import RepoInfo from './components/repoInfo';
 
 const store = createStore(allReducers, applyMiddleware(thunk));
 
@@ -17,9 +19,11 @@ export default class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <Router hideNavBar="true">
+        <Router>
           <Scene key="root">
-            <Scene key="welcom" component={Welcom} title="Welcom" initial={true} />
+            <Scene key="Welcom" component={Welcom} hideNavBar title="Welcom" initial={true} />
+            <Scene key="RepoList" component={RepoList} hideNavBar title="RepoList" />
+            <Scene key="RepoInfo" component={RepoInfo} hideNavBar title="RepoInfo" />
           </Scene>
         </Router>
       </Provider>

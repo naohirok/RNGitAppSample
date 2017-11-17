@@ -13,6 +13,22 @@ class Welcome extends Component {
                     </Body>
                     <Right />
                 </Header>
+                <Content contentContainerStyle={{
+                    justifyContent: 'center', alignItems: 'center',
+                    paddingTop: 40, paddingHorizontal: 10
+                }}>
+                    <Card>
+                        <CardItem>
+                            <Text>Welcom to Candy Land Folks ;)</Text>
+                        </CardItem>
+                        <CardItem>
+                            <Text>Press Button to fetch Github Repos</Text>
+                        </CardItem>
+                    </Card>
+                    <Button dark block onPress={() => {Actions.RepoList();}} style={{marginTop: 40}}>
+                        <Text> Fetch Github Repos </Text>
+                    </Button>
+                </Content>
             </Container>
         );
     }
