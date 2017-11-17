@@ -25,7 +25,7 @@ class Welcome extends Component {
                             <Text>Press Button to fetch Github Repos</Text>
                         </CardItem>
                     </Card>
-                    <Button dark block onPress={() => {Actions.RepoList();}} style={{marginTop: 40}}>
+                    <Button dark block onPress={() => {Actions.RepoList({text: 'hoge'});}} style={{marginTop: 40}}>
                         <Text> Fetch Github Repos </Text>
                     </Button>
                 </Content>

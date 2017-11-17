@@ -4,6 +4,11 @@ import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 
 class RepoInfo extends Component {
+
+    componentWillMount() {
+        console.log(this.props.text);
+    }
+
     render() {
         return (
             <Container>

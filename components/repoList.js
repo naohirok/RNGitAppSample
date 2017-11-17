@@ -7,7 +7,12 @@ import { getRepos, getRepoThunk, repoSelected } from '../actions/index';
 
 class RepoList extends Component {
 
+    constructor(props) {
+        super(props);
+    }
+
     componentWillMount() {
+        console.log(this.props.text);
         this.props.getRepoThunk();
     }
 
@@ -49,7 +54,7 @@ class RepoList extends Component {
                     <Content>
                         <List dataArray={this.props.repos} renderRow={(item) =>
                             <ListItem onPress={() => {
-                                Actions.RepoInfo();
+                                Actions.RepoInfo({text: 'fuga'});
                                 this.props.repoSelected(item)
                                 }}>
                                 <Text>{item.full_name}</Text>
